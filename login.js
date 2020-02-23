@@ -1,9 +1,9 @@
 // FUNCAO QUE VERIFICA LOGIN NO BACKEND
-async function login() {
+function login() {
     let login = document.querySelector('#login').value
     let senha = document.querySelector('#senha').value
 
-    // alert(`${login} ${senha}`)
+    alert(`${login} ${senha}`)
     if (login.trim() != '' && senha.trim() != '') {
         $.ajax({
             url: './backend/login.php',
