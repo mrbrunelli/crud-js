@@ -58,8 +58,12 @@
                     <h5 class="card-title">CRUD JS - Cadastro</h5>
                     <div class="row">
                         <div class="col-md-12 form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" class="form-control" name="nome" id="nome" placeholder="Digite seu nome">
+                        </div>
+                        <div class="col-md-12 form-group">
                             <label for="login"><small>Login</small></label>
-                            <input type="text" class="form-control" name="login" id="login" placeholder="Digite seu login">
+                            <input type="text" class="form-control" name="login2" id="login2" placeholder="Digite seu login">
                         </div>
                         <div class="col-md-12 form-group">
                             <label for="senha"><small>Senha</small></label>
@@ -73,7 +77,7 @@
                             <button type="button" class="btn btn-danger btn-block" onclick="fnToggle('login', 'cadastro')">Cancelar</button>
                         </div>
                         <div class="col-md-7">
-                            <button type="button" class="btn btn-primary btn-block" onclick="cadastrar()">Cadastrar</button>
+                            <button id="btnCadastrar" type="button" class="btn btn-primary btn-block" onclick="cadastrar()" disabled>Cadastrar</button>
                         </div>
                     </div>
                 </div>
