@@ -7,29 +7,21 @@
     <title>Login CRUD JS</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
-
+    <link rel="stylesheet" href="./login.css">
 
 
 </head>
 
 <body>
-
-    <style>
-        .login {
-            position: absolute;
-            top: 20%;
-            left: 30%;
-        }
-    </style>
-
-    <div class="card mb-3 shadow login" style="max-width: 540px;">
+    <!-- CARD DE LOGIN -->
+    <div class="card mb-3 shadow login" id="login" style="max-width: 540px;">
         <div class="row no-gutters">
             <div class="col-md-4 align-self-center">
                 <img src="./app/storage/js.png" class="card-img" alt="...">
             </div>
             <div class="col-md-8">
                 <div class="card-body">
-                    <h5 class="card-title">CRUD JS</h5>
+                    <h5 class="card-title">CRUD JS - Login</h5>
                     <div class="row">
                         <div class="col-md-12 form-group">
                             <label for="login"><small>Login</small></label>
@@ -46,17 +38,56 @@
                         <div class="col-md-12">
                             <button type="button" class="btn btn-primary btn-block" onclick="login()">Entrar</button>
                         </div>
+                        <div class="col-md-9 offset-md-3 mt-4">
+                            <a href="#" onclick="fnToggle('cadastro', 'login')">Não tenho uma conta</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- CARD DE CADASTRO -->
+    <div class="card mb-3 shadow login" id="cadastro" style="max-width: 540px; display: none">
+        <div class="row no-gutters">
+            <div class="col-md-4 align-self-center">
+                <img src="./app/storage/js.png" class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">CRUD JS - Cadastro</h5>
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <label for="login"><small>Login</small></label>
+                            <input type="text" class="form-control" name="login" id="login" placeholder="Digite seu login">
+                        </div>
+                        <div class="col-md-12 form-group">
+                            <label for="senha"><small>Senha</small></label>
+                            <input type="password" class="form-control" name="senha2" id="senha2" placeholder="Digite sua senha">
+                        </div>
+                        <div class="col-md-12 form-group">
+                            <label for="senha"><small>Confirma Senha <i id="certo" class="fas fa-check text-success"></i><i id="errado" class="fas fa-times text-danger"></i></small></label>
+                            <input type="password" class="form-control" name="confirmaSenha" id="confirmaSenha" placeholder="Confirme sua senha" onkeyup="validaSenha(this.value)">
+                        </div>
+                        <div class="col-md-5">
+                            <button type="button" class="btn btn-danger btn-block" onclick="fnToggle('login', 'cadastro')">Cancelar</button>
+                        </div>
+                        <div class="col-md-7">
+                            <button type="button" class="btn btn-primary btn-block" onclick="cadastrar()">Cadastrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="https://kit.fontawesome.com/5ae85dff3f.js" crossorigin="anonymous"></script>
     <script src="./login.js" async></script>
 
 </body>

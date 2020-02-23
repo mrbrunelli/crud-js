@@ -1,3 +1,3 @@
 <?php
-
-echo "ola";
+session_start();
+echo "ola " . $_SESSION['UsuarioNome'];
