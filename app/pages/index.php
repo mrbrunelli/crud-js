@@ -48,7 +48,7 @@ include '../../includes/header.php';
             </div>
             <div class="form-group">
                 <label for="confirmaSenha"><small>Confirmar senha</small></label>
-                <input type="password" class="form-control is-valid" name="confirmaSenha" id="confirmaSenha">
+                <input type="password" class="form-control" name="confirmaSenha" id="confirmaSenha" onkeyup="verificarSenha(this.value)">
             </div>
         </div>
 

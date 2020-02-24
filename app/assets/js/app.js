@@ -37,9 +37,9 @@ function verificarUsuario(login) {
         },
         success: (resultado) => {
             if (resultado == 1) {
-                fnValidar(`is-invalid`, `is-valid`)
+                fnValidar(`login`, `is-invalid`, `is-valid`)
             } else {
-                fnValidar(`is-valid`, `is-invalid`)
+                fnValidar(`login`, `is-valid`, `is-invalid`)
             }
         },
         error: (resultado) => {
@@ -48,8 +48,18 @@ function verificarUsuario(login) {
     })
 }
 
-function fnValidar(add, remove) {
-    document.querySelector('#login').classList.add(`${add}`)
-    document.querySelector('#login').classList.remove(`${remove}`)
+function fnValidar(id, add, remove) {
+    document.querySelector(`#${id}`).classList.add(`${add}`)
+    document.querySelector(`#${id}`).classList.remove(`${remove}`)
+}
+
+
+function verificarSenha(p) {
+    let senha = document.querySelector('#senha').value
+    if (senha == p) {
+        fnValidar(`confirmaSenha`, `is-valid`, `is-invalid`)
+    } else {
+        fnValidar(`confirmaSenha`, `is-invalid`, `is-valid`)
+    }
 }
 
