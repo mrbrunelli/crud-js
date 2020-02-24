@@ -27,6 +27,15 @@ function listarUsuarios() {
     })
 }
 
+// FUNÇÃO PARA LOGAR COM ENTER
+const enterLogin = document.querySelector('#confirmaSenha')
+enterLogin.addEventListener('keyup', (e) => {
+    let tecla = e.which || e.keycode
+    if (tecla == 13) {
+        atualizarUsuario()
+    }
+})
+
 // FUNCÃO PARA DAR UPDATE NOS USUARIOS
 function atualizarUsuario() {
     let idusuario = document.querySelector('#id').value

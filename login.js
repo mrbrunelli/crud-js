@@ -3,7 +3,6 @@ function login() {
     let login = document.querySelector('#login').value
     let senha = document.querySelector('#senha').value
 
-    alert(`${login} ${senha}`)
     if (login.trim() != '' && senha.trim() != '') {
         $.ajax({
             url: './backend/login.php',
@@ -29,6 +28,15 @@ function login() {
         Swal.fire('Erro!', 'Digite um login válido!', 'error')
     }
 }
+
+// FUNÇÃO PARA LOGAR COM ENTER
+const enterLogin = document.querySelector('#senha')
+enterLogin.addEventListener('keyup', (e) => {
+    let tecla = e.which || e.keycode
+    if (tecla == 13) {
+        login()
+    }
+})
 
 // FUNCÃO QUE VERIFICA SE O USUARIO JÁ ESTA CADASTRADO
 function verificarUsuario(login) {
