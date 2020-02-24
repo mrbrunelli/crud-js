@@ -1,4 +1,4 @@
-# CRUD JS
+# CRUD JS - Matheus Ricardo Brunelli
 ## *CRUD com sistema de login e senha, utilizando Ajax para fazer requisições ao Back-End*
 
 ## Front-End
