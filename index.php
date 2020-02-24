@@ -41,7 +41,12 @@
                         <div class="col-md-12">
                             <button type="button" class="btn btn-primary btn-block" onclick="login()">Entrar</button>
                         </div>
-                        <div class="col-md-9 offset-md-3 mt-4">
+                        <div class="col-md-3 mt-3 text-center">
+                            <div class="spinner-grow text-primary" id="loading" role="status">
+                                <span class="sr-only">Carregando...</span>
+                            </div>
+                        </div>
+                        <div class="col-md-9 mt-4">
                             <a href="#" onclick="fnToggle('cardCadastro', 'cardLogin')">Não tenho uma conta</a>
                         </div>
                     </div>

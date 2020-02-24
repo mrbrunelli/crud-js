@@ -15,8 +15,9 @@ if ($_POST) {
                 $_SESSION['UsuarioID'] = $row['idusuario'];
                 $_SESSION['UsuarioLogin'] = $row['login'];
                 $_SESSION['UsuarioNome'] = $row['nome'];
+                $_SESSION['UsuarioSenha'] = $row['senha'];
             }
-            if (isset($_SESSION['UsuarioLogin']) && $_SESSION['UsuarioLogin'] == $login) {
+            if (isset($_SESSION['UsuarioLogin']) && $_SESSION['UsuarioLogin'] == $login && $_SESSION['UsuarioSenha'] == $senha) {
                 echo 1;
                 exit;
             } else {

@@ -2,31 +2,35 @@
 function login() {
     let login = document.querySelector('#login').value
     let senha = document.querySelector('#senha').value
+    document.querySelector('#loading').style.display = 'block'
 
-    if (login.trim() != '' && senha.trim() != '') {
-        $.ajax({
-            url: './backend/login.php',
-            type: 'post',
-            async: true,
-            data: {
-                login,
-                senha
-            },
-            success: function (result) {
-                if (result == 1) {
-                    window.location.href = './app/pages/'
-                } else {
-                    Swal.fire('Erro!', 'Login ou senha incorretos!', 'error')
+    setTimeout(() => {
+        if (login.trim() != '' && senha.trim() != '') {
+            $.ajax({
+                url: './backend/login.php',
+                type: 'post',
+                async: true,
+                data: {
+                    login,
+                    senha
+                },
+                success: function (result) {
+                    if (result == 1) {
+                        window.location.href = './app/pages/'
+                    } else {
+                        Swal.fire('Erro!', 'Login ou senha incorretos!', 'error')
+                        console.log(result)
+                    }
+                },
+                error: function (result) {
                     console.log(result)
                 }
-            },
-            error: function (result) {
-                console.log(result)
-            }
-        })
-    } else {
-        Swal.fire('Erro!', 'Digite um login válido!', 'error')
-    }
+            })
+        } else {
+            Swal.fire('Erro!', 'Digite um login válido!', 'error')
+        }
+        document.querySelector('#loading').style.display = 'none'
+    }, 1000)
 }
 
 // FUNÇÃO PARA LOGAR COM ENTER
