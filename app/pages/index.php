@@ -60,11 +60,16 @@ include '../../includes/header.php';
                         <th>ID</th>
                         <th>Nome</th>
                         <th>Login</th>
+                        <th></th>
+                        <th></th>
                     </thead>
                     <tbody id="lista">
 
                     </tbody>
                 </table>
+            </div>
+            <div class="text-center mt-3">
+                <a href="https://github.com/mrbrunelli/crud-js" target="__blank" class="nav-link"><code><i class="fas fa-code"></i> Desenvolvido por Matheus R. Brunelli</code></a>
             </div>
         </div>
     </div>
