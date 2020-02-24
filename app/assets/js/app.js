@@ -66,6 +66,7 @@ function atualizarUsuario() {
                 console.log(resultado)
             }
         })
+        limparFormulario()
         listarUsuarios()
     } else {
         Swal.fire('Erro!', 'As senhas não conferem!', 'error')
@@ -167,5 +168,13 @@ function verificarSenha(p) {
         fnValidar(`confirmaSenha`, `is-invalid`, `is-valid`)
         document.querySelector('#btnAtualizar').disabled = true
     }
+}
+
+function limparFormulario() {
+    document.querySelector('#id').value = ''
+    document.querySelector('#nome').value = ''
+    document.querySelector('#login').value = ''
+    document.querySelector('#senha').value = ''
+    document.querySelector('#confirmaSenha').value = ''
 }
 
