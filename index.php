@@ -66,7 +66,7 @@
                         </div>
                         <div class="col-md-12 form-group">
                             <label for="login2"><small>Login</small></label>
-                            <input type="text" class="form-control" name="login2" id="login2" placeholder="Digite seu login">
+                            <input type="text" class="form-control" name="login2" id="login2" placeholder="Digite seu login" onblur="verificarUsuario(this.value)">
                         </div>
                         <div class="col-md-12 form-group">
                             <label for="senha2"><small>Senha</small></label>
@@ -74,7 +74,7 @@
                         </div>
                         <div class="col-md-12 form-group">
                             <label for="confirmaSenha"><small>Confirma Senha <i id="certo" class="fas fa-check text-success"></i><i id="errado" class="fas fa-times text-danger"></i></small></label>
-                            <input type="password" class="form-control" name="confirmaSenha" id="confirmaSenha" placeholder="Confirme sua senha" onkeyup="validaSenha(this.value)">
+                            <input type="password" class="form-control" name="confirmaSenha" id="confirmaSenha" placeholder="Confirme sua senha" onkeyup="verificarSenha(this.value)">
                         </div>
                         <div class="col-md-5">
                             <button type="button" class="btn btn-danger btn-block" onclick="fnToggle('cardLogin', 'cardCadastro')">Cancelar</button>

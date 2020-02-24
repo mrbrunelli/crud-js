@@ -50,6 +50,9 @@ include '../../includes/header.php';
                 <label for="confirmaSenha"><small>Confirmar senha</small></label>
                 <input type="password" class="form-control" name="confirmaSenha" id="confirmaSenha" onkeyup="verificarSenha(this.value)">
             </div>
+            <div class="form-group">
+                <button class="btn btn-block btn-primary" id="btnAtualizar" onclick="atualizarUsuario()">Atualizar</button>
+            </div>
         </div>
 
         <!-- TABLE QUE EXIBE OS RESULTADOS -->
