@@ -14,6 +14,9 @@
 
 <body>
     <!-- CARD DE LOGIN -->
+    <div class="text-center pt-5">
+        <a href="https://github.com/mrbrunelli" target="__blank" class="nav-link"><code><i class="fab fa-github-alt"></i> Desenvolvido por Matheus R. Brunelli</code></a>
+    </div>
     <div class="card mb-3 shadow login" id="cardLogin" style="max-width: 540px;">
         <div class="row no-gutters">
             <div class="col-md-4 align-self-center">
