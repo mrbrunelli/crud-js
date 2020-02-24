@@ -1,3 +1,6 @@
+// AO CARREGAR A PÁGINA O JAVASCRIPT CONSULTA OS USUARIOS CADASTRADOS
+window.document.onload = listarUsuarios()
+
 // FUNÇÃO PARA LISTAR USUARIOS CADASTRADOS
 function listarUsuarios() {
     const lista = document.querySelector('#lista')
@@ -23,4 +26,29 @@ function listarUsuarios() {
     })
 }
 
-window.document.onload = listarUsuarios()
+// FUNCÃO QUE VERIFICA SE O USUARIO JÁ ESTA CADASTRADO
+async function verificarUsuario(login) {
+    $.ajax({
+        url: '../../backend/verificaUsuario.php',
+        type: 'post',
+        async: true,
+        data: {
+            login
+        },
+        success: (resultado) => {
+            if (resultado == 1) {
+                fnValidar(`is-invalid`)
+            } else {
+                fnValidar(`is-valid`)
+            }
+        },
+        error: (resultado) => {
+            console.log(resultado)
+        }
+    })
+}
+
+function fnValidar(p) {
+    document.querySelector('#login').classList.add(`${p}`)
+}
+

@@ -10,7 +10,7 @@ include '../../includes/header.php';
 
 <nav class="navbar sticky-top navbar-dark bg-dark shadow">
     <div class="container">
-        <a href="https://github.com/mrbrunelli" target="__blank" class="nav-brand"><i class="fab fa-js fa-3x text-warning"></i></a>
+        <a href="https://github.com/mrbrunelli/crud-js" target="__blank" class="nav-brand"><i class="fab fa-js fa-3x text-warning"></i></a>
         <ul class="nav">
             <li class="nav-item">
                 <div class="dropdown">
@@ -26,6 +26,7 @@ include '../../includes/header.php';
     </div>
 </nav>
 
+<!-- FORMULÁRIO PARA EDITAR USUARIO -->
 <div class="container mt-5">
     <div class="row justify-content-between">
         <div class="col-md-4">
@@ -39,7 +40,7 @@ include '../../includes/header.php';
             </div>
             <div class="form-group">
                 <label for="login"><small>Login</small></label>
-                <input type="text" class="form-control" name="login" id="login">
+                <input type="text" class="form-control" name="login" id="login" onkeyup="verificarUsuario(this.value)">
             </div>
             <div class="form-group">
                 <label for="senha"><small>Senha</small></label>
@@ -51,6 +52,7 @@ include '../../includes/header.php';
             </div>
         </div>
 
+        <!-- TABLE QUE EXIBE OS RESULTADOS -->
         <div class="col-md-7">
             <div class="tabela shadow">
                 <table class="table table-hover table-striped">
