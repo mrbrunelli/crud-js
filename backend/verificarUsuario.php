@@ -8,6 +8,7 @@ if ($_POST) {
         $sql = $pdo->query("select * from usuario where login = '$login'");
 
         if ($sql->execute()) {
+            // VERIFICA SE RETORNOU RESULTADO CONTANDO AS LINHAS
             if ($sql->rowCount() > 0) {
                 echo 1;
                 exit;

@@ -40,7 +40,7 @@ include '../../includes/header.php';
             </div>
             <div class="form-group">
                 <label for="login"><small>Login</small></label>
-                <input type="text" class="form-control" name="login" id="login" onkeyup="verificarUsuario(this.value)">
+                <input type="text" class="form-control" name="login" id="login" onblur="verificarUsuario(this.value)">
             </div>
             <div class="form-group">
                 <label for="senha"><small>Senha</small></label>
@@ -69,6 +69,7 @@ include '../../includes/header.php';
         </div>
     </div>
 </div>
+
 
 <?php
 include '../../includes/footer.php';

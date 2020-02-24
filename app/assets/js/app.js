@@ -27,9 +27,9 @@ function listarUsuarios() {
 }
 
 // FUNCÃO QUE VERIFICA SE O USUARIO JÁ ESTA CADASTRADO
-async function verificarUsuario(login) {
+function verificarUsuario(login) {
     $.ajax({
-        url: '../../backend/verificaUsuario.php',
+        url: '../../backend/verificarUsuario.php',
         type: 'post',
         async: true,
         data: {
@@ -37,9 +37,9 @@ async function verificarUsuario(login) {
         },
         success: (resultado) => {
             if (resultado == 1) {
-                fnValidar(`is-invalid`)
+                fnValidar(`is-invalid`, `is-valid`)
             } else {
-                fnValidar(`is-valid`)
+                fnValidar(`is-valid`, `is-invalid`)
             }
         },
         error: (resultado) => {
@@ -48,7 +48,8 @@ async function verificarUsuario(login) {
     })
 }
 
-function fnValidar(p) {
-    document.querySelector('#login').classList.add(`${p}`)
+function fnValidar(add, remove) {
+    document.querySelector('#login').classList.add(`${add}`)
+    document.querySelector('#login').classList.remove(`${remove}`)
 }
 

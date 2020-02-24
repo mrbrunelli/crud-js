@@ -16,7 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script src="https://kit.fontawesome.com/5ae85dff3f.js" crossorigin="anonymous"></script>
-    <script src="../assets/js/app.js" async></script>
+    
 </head>
 
 <body>
