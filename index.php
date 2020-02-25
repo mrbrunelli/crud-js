@@ -17,6 +17,7 @@
     <div class="text-center pt-5">
         <a href="https://github.com/mrbrunelli" target="__blank" class="nav-link"><code><i class="fab fa-github-alt"></i> Desenvolvido por Matheus R. Brunelli</code></a>
     </div>
+    
     <div class="card mb-3 shadow login" id="cardLogin" style="max-width: 540px;">
         <div class="row no-gutters">
             <div class="col-md-4 align-self-center">
@@ -81,10 +82,10 @@
                             <label for="confirmaSenha"><small>Confirma Senha <i id="certo" class="fas fa-check text-success"></i><i id="errado" class="fas fa-times text-danger"></i></small></label>
                             <input type="password" class="form-control" name="confirmaSenha" id="confirmaSenha" placeholder="Confirme sua senha" onkeyup="verificarSenha(this.value)">
                         </div>
-                        <div class="col-md-5">
+                        <div class="col-md-5 my-2">
                             <button type="button" class="btn btn-danger btn-block" onclick="fnToggle('cardLogin', 'cardCadastro')">Cancelar</button>
                         </div>
-                        <div class="col-md-7">
+                        <div class="col-md-7 my-2">
                             <button id="btnCadastrar" type="button" class="btn btn-primary btn-block" onclick="cadastrar()" disabled>Cadastrar</button>
                         </div>
                     </div>

@@ -4,7 +4,7 @@
 
 .tabela {
     height: 450px;
-    overflow-x: hidden;
+    overflow-x: auto;
     overflow-y: auto;
 }
 

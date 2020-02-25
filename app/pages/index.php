@@ -29,7 +29,7 @@ include '../../includes/header.php';
 <!-- FORMULÁRIO PARA EDITAR USUARIO -->
 <div class="container mt-5">
     <div class="row justify-content-between">
-        <div class="col-md-4">
+        <div class="col-lg-4">
             <div class="form-group">
                 <label for="id"><small>ID</small></label>
                 <input type="text" class="form-control" name="id" id="id" disabled>
@@ -56,7 +56,7 @@ include '../../includes/header.php';
         </div>
 
         <!-- TABLE QUE EXIBE OS RESULTADOS -->
-        <div class="col-md-7">
+        <div class="col-lg-7">
             <div class="tabela shadow">
                 <table class="table table-hover table-striped">
                     <thead>
