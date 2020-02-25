@@ -10,7 +10,7 @@ include '../../includes/header.php';
 
 <nav class="navbar sticky-top navbar-dark bg-dark shadow">
     <div class="container">
-        <a href="https://github.com/mrbrunelli/crud-js" target="__blank" class="nav-brand"><i class="fab fa-js fa-3x text-warning"></i></a>
+        <a href="https://github.com/mrbrunelli/crud-js" target="__blank" class="nav-brand d-none d-sm-block"><i class="fab fa-js fa-3x text-warning"></i></a>
         <ul class="nav">
             <li class="nav-item">
                 <div class="dropdown">
